@@ -1,0 +1,106 @@
+.product{
+    height:90%;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* background-color: lightgray; */
+    align-items: center;
+}
+.product-item{
+    width:27%;
+    height: 80%;
+    background-color: white;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+     transition: all 0.3s ease;
+}
+.product-item:hover{
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.product-item img{
+    width: 100%;
+    height: 50%;
+    /* border: 2px solid black; */
+    border-radius: 15px 15px 0 0;
+}
+.product-item .inner{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.product-item .inner h3{
+    font-size: 1.5em;
+}
+.product-item .inner p{
+    font-size: 1.2em;
+    color: #8F8080;
+}
+
+.product-item .inner h6{
+    font-size: 1.5em;
+    color: #27AE60;
+}
+
+
+.product-item .inner button{
+    width: 40%;
+    height: 18%;
+    background-color: #5C5B5B;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+.product-item .inner button::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 150%;
+    height: 150%;
+    background-color:#27AE60;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    z-index: -1;
+    cursor: pointer;
+}
+.product-item .inner button:hover::after{
+    /* width: 100%;
+    opacity: 1;
+    z-index:1; */
+    transform: translate(-50%, -50%) scale(1);
+    cursor: pointer;
+}
+
+/* **responsive design for mobile devices */
+@media (max-width: 1024px) {
+    .product-item{
+        width: 45%;
+    }
+}
+@media (max-width: 768px) {
+    .product-item{
+        width: 60%;
+    }
+    .product{
+        justify-content: center;
+    }
+}   

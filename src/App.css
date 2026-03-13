@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.app{
+  height: 100vh;
+  width: 100%;       
+  background-color:white;   
+  display: flex;                                                              
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+h1{
+  width: 100%;
+  padding: 15px;
+  height: 10%;
+  /* background-color: grey; */
+  text-align: center;
+  color: grey;
+}
+
+/* **responsive design for mobile devices** */
+@media (max-width: 768px) {
+  .app{
+    /* height: 100vh; */
+    width: 100%;  
+    /* background-color:rgb(92, 91, 91); */
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-around;
+    align-items: center;
+  }
+  h1{
+    width: 100%;
+    padding: 15px;
+    height: 10%;  
+    /* background-color: grey; */
+    text-align: center;
+    /* color: white;    */
+  }
+}
